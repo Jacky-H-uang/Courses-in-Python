@@ -1,1 +1,1 @@
-## This is my college course in Python.
+## This is my college courses in Python.
