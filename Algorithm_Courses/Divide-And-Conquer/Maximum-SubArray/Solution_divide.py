@@ -21,8 +21,6 @@ def creatData():
     data = []
     for i in range(100):
         data.append(random.randint(100,1001))
-    for x in data:
-        print(x)
     return data
 
 # 计算变化的差值的数组
