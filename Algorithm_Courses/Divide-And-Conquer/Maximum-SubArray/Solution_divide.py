@@ -35,7 +35,7 @@ def pretreatment(A):
 # 处理分治的合并项
 # 返回合并的最左边界，合并的最右边界，合并区间得到的最大子数组的和
 def findMaxCrossingSubarray(A,low,mid,high):
-    leftsum = - 1000000
+    leftsum = - sys.maxsize-1
     sum = 0
     maxleft = 0
     for i in range(low,mid+1)[::-1]:
@@ -44,7 +44,7 @@ def findMaxCrossingSubarray(A,low,mid,high):
             leftsum = sum
             maxleft = i
 
-    rightsum = -1000000
+    rightsum = - sys.maxsize-1
     sum = 0
     maxright = 0
     for i in range(mid + 1 , high):
