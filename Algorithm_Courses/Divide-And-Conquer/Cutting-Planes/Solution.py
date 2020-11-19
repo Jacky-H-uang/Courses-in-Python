@@ -16,8 +16,8 @@ import random
 # 随机产生若干的(k,b)组成的列表
 def creatData():
     ret = []
-    for i in range(3):
-        ret.append((random.randint(0,10),random.randint(0,10)))
+    for i in range(100):
+        ret.append((random.randint(-100,100),random.randint(-100,100)))
 
     return ret
 
