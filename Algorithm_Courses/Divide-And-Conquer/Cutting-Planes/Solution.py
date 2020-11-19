@@ -16,8 +16,8 @@ import random
 # 随机产生若干的(k,b)组成的列表
 def creatData():
     ret = []
-    for i in range(100):
-        ret.append((random.randint(0,100),random.randint(0,100)))
+    for i in range(3):
+        ret.append((random.randint(0,10),random.randint(0,10)))
 
     return ret
 
@@ -97,4 +97,4 @@ if __name__ == '__main__':
     LeftB = int(input("左边界 ： "))
     RightB = int(input("右边界 ： "))
 
-    print("{} 条直线最终在边界 {} ~ {} 切割平面数 {}: ".format(len(ret),LeftB,RightB,cuttingPlane(LeftB,RightB,ret)))
+    print("{} 条直线最终在边界 {} ~ {} 切割平面数 :{} ".format(len(ret),LeftB,RightB,cuttingPlane(LeftB,RightB,ret)))
