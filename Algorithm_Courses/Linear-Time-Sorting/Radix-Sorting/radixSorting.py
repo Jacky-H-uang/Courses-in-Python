@@ -11,7 +11,8 @@
 """
 
 import random
-
+import datetime
+import time
 
 def createArray(Num,X):
     retA = []
@@ -34,14 +35,15 @@ def getMax(Array,N):
 
 # 将每个数字计算出来其 exp 位的数字然后排序
 def radixHelper(Array,N,exp):
-    AUX = [0] * (N+1)
+    AUX = [0] * N
     Bucket = [0] * 10           # 10 个桶来存放在位为 0~9 的数字
 
+
     # 这里采用计数排序的思路
-    for i in range(N):
+    for i in range(0,N):
         Bucket[(Array[i]//exp)%10] += 1
 
-    for i in range(1,N):
+    for i in range(1,10):
         Bucket[i] += Bucket[i-1]
 
     for i in range(N-1,-1,-1):
@@ -74,7 +76,9 @@ if __name__ == '__main__':
     k = int(k)
 
     A = createArray(num,k)
-    # A = [53,542,3,63,14,213,154,748,616]
     print("排序前：\n{}".format(A))
+    start = datetime.datetime.now()
     radixSorting(A)
+    end = datetime.datetime.now()
     print("排序后：\n{}".format(A))
+    print("\n 算法运行时间 ： " + str((end - start).seconds) + " s")
