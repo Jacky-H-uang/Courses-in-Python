@@ -49,7 +49,7 @@ def countSorting(A,k):
         C[i] += C[i-1]
 
     # 计数排序
-    for i in range(len(A)-1,0,-1):
+    for i in range(len(A)-1,-1,-1):
         B[C[A[i]]] = A[i]
         C[A[i]] -= 1
 
