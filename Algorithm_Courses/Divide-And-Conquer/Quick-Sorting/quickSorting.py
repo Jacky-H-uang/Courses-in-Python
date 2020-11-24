@@ -29,6 +29,7 @@ def exchange(Array,i,j):
     Array[j] = temp
 
 # 利用 pivot 来分区
+# partition
 def partition(Array,p,r):
     x = Array[r]
     i = p - 1
