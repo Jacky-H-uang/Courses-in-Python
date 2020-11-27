@@ -2,7 +2,7 @@
 It includes two courses Visualization and Algorithm.
 
 1. Algorithm Course is divided by tags,and all the solutions and datasets are implemented in Python.
-2. Visualizatio Course is including many tests.
+2. Visualization Course is including many tests.
 
 I am still working on it now , it's to be continued...
 
