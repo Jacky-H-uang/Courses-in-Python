@@ -1,5 +1,4 @@
 # Created By Jacky on 2020/11/10
-
 # -*- coding:utf-8  -*-
 
 import csv
@@ -11,7 +10,7 @@ plt.rcParams['font.sans-serif']=['SimHei'] #用来正常显示中文标签
 plt.rcParams['axes.unicode_minus']=False #用来正常显示负号
 
 """
-反应 2007 ~ 2010 美国电影类型的情况
+反应 2007 ~ 2011 美国电影类型的情况
 """
 
 
@@ -23,8 +22,8 @@ def loadData(filename):
 
         story = []
         for row in reader:
-            if row == ' ':  continue
-            story.append(row[4])
+            if row[5] == '':  continue
+            story.append(row[5])
 
     return story
 
@@ -50,7 +49,7 @@ def paserData(A):
 def add_labels(rects):
     for rect in rects:
         width = rect.get_width()
-        plt.text(width + 2, rect.get_y() + rect.get_height()/10, str(width) + "部", ha = 'center', va ='bottom')
+        plt.text(width + 3 , rect.get_y() + rect.get_height()/10, str(width) + "部", ha = 'center', va ='bottom')
         rect.set_edgecolor('blue')
 
 
@@ -67,9 +66,10 @@ def plotter(dic):
 
     # 为柱状图设置 label
     text = plt.barh(y =  x, height = 0.6 , color = (0.5,0.4,0.3) , width = y)
+    plt.tick_params(axis='y', rotation = 15, color='red')
     plt.title("反应 2007 ~ 2010 美国电影类型的情况",fontsize = 23,color = (0.1,0.5,0.6))
     add_labels(text)
-    plt.xlabel("电影类型数量",color = (0.8,0.4,0.2),fontsize = 14)
+    plt.xlabel("电影部数",color = (0.8,0.4,0.2),fontsize = 14)
     plt.ylabel("电影类型" , color = (0.8,0.4,0.2),fontsize = 14)
 
 
@@ -85,7 +85,7 @@ if __name__ == '__main__':
             'Most Profitable Hollywood Stories - US 2008.csv',
             'Most Profitable Hollywood Stories - US 2009.csv' ,
             'Most Profitable Hollywood Stories - US 2010.csv',
-            'Most Profitable Hollywood Stories - US 2010.csv'
+            'Most Profitable Hollywood Stories - US 2011.csv'
           ]
 
     # 存储数据集合

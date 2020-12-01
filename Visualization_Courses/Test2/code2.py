@@ -8,6 +8,7 @@ import csv
 import matplotlib.pyplot as plt
 import numpy as np
 import pygal
+import squarify
 
 plt.rcParams['font.sans-serif'] = ['SimHei'] #用来正常显示中文标签
 plt.rcParams['axes.unicode_minus'] = False #用来正常显示负号
@@ -49,43 +50,48 @@ def parserData(filenames):
             ret.append((i,float(s)))
 
     ret = sorted(ret,key = lambda x:x[1],reverse = True)[:20]
-    ret = sorted(ret,key = lambda x:x[1])
+    ret = sorted(ret,key = lambda x:x[1],reverse=True)
 
     return ret
 
 
-# 柱状图添加标签的颜色
-def add_labels(rects):
-    for rect in rects:
-        width = rect.get_width()
-        plt.text(width + 100, rect.get_y() + rect.get_height()/10, str(width) + " $m", ha = 'center', va ='bottom')
-        rect.set_edgecolor('blue')
-
 
 
 # Visualization
+# 方形图来显示 Top 20 的票房情况
 def plotter(filenames):
     A = parserData(filenames)
-
+    print(A)
     X = []
     Y = []
+    values = []
+
+    index = 1
     for i in range(len(A)):
-        X.append(A[i][0])
+        values.append(str(A[i][1]) + "$m")
+        X.append(A[i][0] + "\n(rank" + str(index) + ")")
         Y.append(A[i][1])
-
-    X = np.array(X)
-    Y = np.array(Y)
-
-    fig = plt.figure(dpi = 128 , figsize = (10,6))
-    plt.title("统计2007-2011年电影票房排行榜  (只排前20)",color = (0.5,0.4,0.3),fontsize = 20)
-
-    text = plt.barh(y = X , color = ['r', 'g', 'b', 'c', 'm', 'y',],height = 0.8,width = Y)
-    add_labels(text)
-    plt.tick_params(axis = 'y',rotation = 20,color = 'red')
-    plt.xlabel("票房价值 ($m)" , color = (0.8,0.4,0.2))
-    plt.ylabel("电影名" , color = (0.8,0.4,0.2))
+        index += 1
+    my_dpi = 96
+    plt.figure(figsize=(480 / my_dpi, 480 / my_dpi), dpi=my_dpi)
+    colors = ['steelblue', '#9999ff', 'red', 'indianred', 'deepskyblue', 'lime', 'magenta', 'violet', 'peru', 'green',
+              'yellow', 'orange', 'tomato', 'lawngreen', 'cyan', 'darkcyan', 'dodgerblue', 'teal', 'tan', 'royalblue']
+    plot = squarify.plot(
+        sizes=Y,            # 指定绘图数据
+        label=X,            # 指定标签
+        value=values,       # 添加数值标签
+        edgecolor='white',  # 设置边界框为白色
+        linewidth=3,        # 设置边框宽度为3
+        alpha=.6,           # 设置透明度
+        color=colors
+    )
+    plot.set_title('2007-2011年电影票房排行榜 Top20', fontdict={'fontsize': 24, 'color': (0.5,0.6,0.2)})
+    plt.rc('font', size=20)
 
     plt.show()
+
+
+
 
 
 if __name__ == '__main__':
@@ -95,7 +101,7 @@ if __name__ == '__main__':
             'Most Profitable Hollywood Stories - US 2008.csv',
             'Most Profitable Hollywood Stories - US 2009.csv' ,
             'Most Profitable Hollywood Stories - US 2010.csv',
-            'Most Profitable Hollywood Stories - US 2010.csv'
+            'Most Profitable Hollywood Stories - US 2011.csv'
             ]
 
     plotter(films)
