@@ -1,0 +1,657 @@
+ var chart_bf9850a755be4ebc8bd1ee27339262aa = echarts.init(
+            document.getElementById('bf9850a755be4ebc8bd1ee27339262aa'), 'white', {renderer: 'canvas'});
+        var option_bf9850a755be4ebc8bd1ee27339262aa = {
+    "baseOption": {
+        "series": [
+            {
+                "type": "pie",
+                "name": "\u57ce\u5e02",
+                "clockwise": true,
+                "data": [
+                    {
+                        "name": "\u8d35\u5dde",
+                        "value": 153
+                    },
+                    {
+                        "name": "\u6cb3\u5357",
+                        "value": 141
+                    },
+                    {
+                        "name": "\u5e7f\u897f",
+                        "value": 119
+                    },
+                    {
+                        "name": "\u5c71\u897f",
+                        "value": 106
+                    },
+                    {
+                        "name": "\u7518\u8083",
+                        "value": 80
+                    },
+                    {
+                        "name": "\u56db\u5ddd",
+                        "value": 76
+                    },
+                    {
+                        "name": "\u5b89\u5fbd",
+                        "value": 72
+                    },
+                    {
+                        "name": "\u6cb3\u5317",
+                        "value": 64
+                    }
+                ],
+                "radius": [
+                    "30%",
+                    "55%"
+                ],
+                "center": [
+                    "50%",
+                    "50%"
+                ],
+                "roseType": "radius",
+                "label": {
+                    "show": true,
+                    "position": "top",
+                    "margin": 8
+                }
+            }
+        ],
+        "timeline": {
+            "axisType": "category",
+            "orient": "horizontal",
+            "autoPlay": false,
+            "controlPosition": "left",
+            "loop": true,
+            "rewind": false,
+            "show": true,
+            "inverse": false,
+            "bottom": "-5px",
+            "data": [
+                "2016\u5e74",
+                "2017\u5e74",
+                "2018\u5e74",
+                "2019\u5e74",
+                "2020\u5e74"
+            ]
+        }
+    },
+    "options": [
+        {
+            "legend": [
+                {
+                    "data": [
+                        "\u6cb3\u5357",
+                        "\u8d35\u5dde",
+                        "\u5c71\u897f",
+                        "\u5e7f\u897f",
+                        "\u6cb3\u5317",
+                        "\u7518\u8083",
+                        "\u5b89\u5fbd",
+                        "\u6e56\u5357"
+                    ],
+                    "selected": {}
+                }
+            ],
+            "series": [
+                {
+                    "type": "pie",
+                    "name": "\u57ce\u5e02",
+                    "clockwise": true,
+                    "data": [
+                        {
+                            "name": "\u6cb3\u5357",
+                            "value": 141
+                        },
+                        {
+                            "name": "\u8d35\u5dde",
+                            "value": 137
+                        },
+                        {
+                            "name": "\u5c71\u897f",
+                            "value": 98
+                        },
+                        {
+                            "name": "\u5e7f\u897f",
+                            "value": 95
+                        },
+                        {
+                            "name": "\u6cb3\u5317",
+                            "value": 70
+                        },
+                        {
+                            "name": "\u7518\u8083",
+                            "value": 65
+                        },
+                        {
+                            "name": "\u5b89\u5fbd",
+                            "value": 61
+                        },
+                        {
+                            "name": "\u6e56\u5357",
+                            "value": 61
+                        }
+                    ],
+                    "radius": [
+                        "30%",
+                        "55%"
+                    ],
+                    "center": [
+                        "50%",
+                        "50%"
+                    ],
+                    "roseType": "radius",
+                    "label": {
+                        "show": true,
+                        "position": "top",
+                        "margin": 8
+                    }
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "color": [
+                "#c23531",
+                "#2f4554",
+                "#61a0a8",
+                "#d48265",
+                "#749f83",
+                "#ca8622",
+                "#bda29a",
+                "#6e7074",
+                "#546570",
+                "#c4ccd3",
+                "#f05b72",
+                "#ef5b9c",
+                "#f47920",
+                "#905a3d",
+                "#fab27b",
+                "#2a5caa",
+                "#444693",
+                "#726930",
+                "#b2d235",
+                "#6d8346",
+                "#ac6767",
+                "#1d953f",
+                "#6950a1",
+                "#918597"
+            ]
+        },
+        {
+            "legend": [
+                {
+                    "data": [
+                        "\u8d35\u5dde",
+                        "\u6cb3\u5357",
+                        "\u5c71\u897f",
+                        "\u5e7f\u897f",
+                        "\u6e56\u5357",
+                        "\u7518\u8083",
+                        "\u5b89\u5fbd",
+                        "\u6cb3\u5317"
+                    ],
+                    "selected": {}
+                }
+            ],
+            "series": [
+                {
+                    "type": "pie",
+                    "name": "\u57ce\u5e02",
+                    "clockwise": true,
+                    "data": [
+                        {
+                            "name": "\u8d35\u5dde",
+                            "value": 155
+                        },
+                        {
+                            "name": "\u6cb3\u5357",
+                            "value": 134
+                        },
+                        {
+                            "name": "\u5c71\u897f",
+                            "value": 106
+                        },
+                        {
+                            "name": "\u5e7f\u897f",
+                            "value": 100
+                        },
+                        {
+                            "name": "\u6e56\u5357",
+                            "value": 73
+                        },
+                        {
+                            "name": "\u7518\u8083",
+                            "value": 70
+                        },
+                        {
+                            "name": "\u5b89\u5fbd",
+                            "value": 66
+                        },
+                        {
+                            "name": "\u6cb3\u5317",
+                            "value": 63
+                        }
+                    ],
+                    "radius": [
+                        "30%",
+                        "55%"
+                    ],
+                    "center": [
+                        "50%",
+                        "50%"
+                    ],
+                    "roseType": "radius",
+                    "label": {
+                        "show": true,
+                        "position": "top",
+                        "margin": 8
+                    }
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "color": [
+                "#c23531",
+                "#2f4554",
+                "#61a0a8",
+                "#d48265",
+                "#749f83",
+                "#ca8622",
+                "#bda29a",
+                "#6e7074",
+                "#546570",
+                "#c4ccd3",
+                "#f05b72",
+                "#ef5b9c",
+                "#f47920",
+                "#905a3d",
+                "#fab27b",
+                "#2a5caa",
+                "#444693",
+                "#726930",
+                "#b2d235",
+                "#6d8346",
+                "#ac6767",
+                "#1d953f",
+                "#6950a1",
+                "#918597"
+            ]
+        },
+        {
+            "legend": [
+                {
+                    "data": [
+                        "\u8d35\u5dde",
+                        "\u6cb3\u5357",
+                        "\u5c71\u897f",
+                        "\u5e7f\u897f",
+                        "\u7518\u8083",
+                        "\u56db\u5ddd",
+                        "\u6cb3\u5317",
+                        "\u6e56\u5357"
+                    ],
+                    "selected": {}
+                }
+            ],
+            "series": [
+                {
+                    "type": "pie",
+                    "name": "\u57ce\u5e02",
+                    "clockwise": true,
+                    "data": [
+                        {
+                            "name": "\u8d35\u5dde",
+                            "value": 152
+                        },
+                        {
+                            "name": "\u6cb3\u5357",
+                            "value": 145
+                        },
+                        {
+                            "name": "\u5c71\u897f",
+                            "value": 106
+                        },
+                        {
+                            "name": "\u5e7f\u897f",
+                            "value": 100
+                        },
+                        {
+                            "name": "\u7518\u8083",
+                            "value": 80
+                        },
+                        {
+                            "name": "\u56db\u5ddd",
+                            "value": 76
+                        },
+                        {
+                            "name": "\u6cb3\u5317",
+                            "value": 70
+                        },
+                        {
+                            "name": "\u6e56\u5357",
+                            "value": 66
+                        }
+                    ],
+                    "radius": [
+                        "30%",
+                        "55%"
+                    ],
+                    "center": [
+                        "50%",
+                        "50%"
+                    ],
+                    "roseType": "radius",
+                    "label": {
+                        "show": true,
+                        "position": "top",
+                        "margin": 8
+                    }
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "color": [
+                "#c23531",
+                "#2f4554",
+                "#61a0a8",
+                "#d48265",
+                "#749f83",
+                "#ca8622",
+                "#bda29a",
+                "#6e7074",
+                "#546570",
+                "#c4ccd3",
+                "#f05b72",
+                "#ef5b9c",
+                "#f47920",
+                "#905a3d",
+                "#fab27b",
+                "#2a5caa",
+                "#444693",
+                "#726930",
+                "#b2d235",
+                "#6d8346",
+                "#ac6767",
+                "#1d953f",
+                "#6950a1",
+                "#918597"
+            ]
+        },
+        {
+            "legend": [
+                {
+                    "data": [
+                        "\u8d35\u5dde",
+                        "\u6cb3\u5357",
+                        "\u5e7f\u897f",
+                        "\u5c71\u897f",
+                        "\u9884\u7559",
+                        "\u7518\u8083",
+                        "\u56db\u5ddd",
+                        "\u6e56\u5357"
+                    ],
+                    "selected": {}
+                }
+            ],
+            "series": [
+                {
+                    "type": "pie",
+                    "name": "\u57ce\u5e02",
+                    "clockwise": true,
+                    "data": [
+                        {
+                            "name": "\u8d35\u5dde",
+                            "value": 152
+                        },
+                        {
+                            "name": "\u6cb3\u5357",
+                            "value": 130
+                        },
+                        {
+                            "name": "\u5e7f\u897f",
+                            "value": 116
+                        },
+                        {
+                            "name": "\u5c71\u897f",
+                            "value": 106
+                        },
+                        {
+                            "name": "\u9884\u7559",
+                            "value": 100
+                        },
+                        {
+                            "name": "\u7518\u8083",
+                            "value": 80
+                        },
+                        {
+                            "name": "\u56db\u5ddd",
+                            "value": 76
+                        },
+                        {
+                            "name": "\u6e56\u5357",
+                            "value": 60
+                        }
+                    ],
+                    "radius": [
+                        "30%",
+                        "55%"
+                    ],
+                    "center": [
+                        "50%",
+                        "50%"
+                    ],
+                    "roseType": "radius",
+                    "label": {
+                        "show": true,
+                        "position": "top",
+                        "margin": 8
+                    }
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "color": [
+                "#c23531",
+                "#2f4554",
+                "#61a0a8",
+                "#d48265",
+                "#749f83",
+                "#ca8622",
+                "#bda29a",
+                "#6e7074",
+                "#546570",
+                "#c4ccd3",
+                "#f05b72",
+                "#ef5b9c",
+                "#f47920",
+                "#905a3d",
+                "#fab27b",
+                "#2a5caa",
+                "#444693",
+                "#726930",
+                "#b2d235",
+                "#6d8346",
+                "#ac6767",
+                "#1d953f",
+                "#6950a1",
+                "#918597"
+            ]
+        },
+        {
+            "legend": [
+                {
+                    "data": [
+                        "\u8d35\u5dde",
+                        "\u6cb3\u5357",
+                        "\u5e7f\u897f",
+                        "\u5c71\u897f",
+                        "\u7518\u8083",
+                        "\u56db\u5ddd",
+                        "\u5b89\u5fbd",
+                        "\u6cb3\u5317"
+                    ],
+                    "selected": {}
+                }
+            ],
+            "series": [
+                {
+                    "type": "pie",
+                    "name": "\u57ce\u5e02",
+                    "clockwise": true,
+                    "data": [
+                        {
+                            "name": "\u8d35\u5dde",
+                            "value": 153
+                        },
+                        {
+                            "name": "\u6cb3\u5357",
+                            "value": 141
+                        },
+                        {
+                            "name": "\u5e7f\u897f",
+                            "value": 119
+                        },
+                        {
+                            "name": "\u5c71\u897f",
+                            "value": 106
+                        },
+                        {
+                            "name": "\u7518\u8083",
+                            "value": 80
+                        },
+                        {
+                            "name": "\u56db\u5ddd",
+                            "value": 76
+                        },
+                        {
+                            "name": "\u5b89\u5fbd",
+                            "value": 72
+                        },
+                        {
+                            "name": "\u6cb3\u5317",
+                            "value": 64
+                        }
+                    ],
+                    "radius": [
+                        "30%",
+                        "55%"
+                    ],
+                    "center": [
+                        "50%",
+                        "50%"
+                    ],
+                    "roseType": "radius",
+                    "label": {
+                        "show": true,
+                        "position": "top",
+                        "margin": 8
+                    }
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "color": [
+                "#c23531",
+                "#2f4554",
+                "#61a0a8",
+                "#d48265",
+                "#749f83",
+                "#ca8622",
+                "#bda29a",
+                "#6e7074",
+                "#546570",
+                "#c4ccd3",
+                "#f05b72",
+                "#ef5b9c",
+                "#f47920",
+                "#905a3d",
+                "#fab27b",
+                "#2a5caa",
+                "#444693",
+                "#726930",
+                "#b2d235",
+                "#6d8346",
+                "#ac6767",
+                "#1d953f",
+                "#6950a1",
+                "#918597"
+            ]
+        }
+    ]
+};
+        chart_bf9850a755be4ebc8bd1ee27339262aa.setOption(option_bf9850a755be4ebc8bd1ee27339262aa);

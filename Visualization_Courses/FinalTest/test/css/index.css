@@ -1,0 +1,163 @@
+body,
+html {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font-family: "微软雅黑";
+	background-color: #0a4271;
+	margin: 0;
+	padding: 0;
+}
+
+@keyframes move {
+	0% {
+		
+	}
+
+	25% {
+		transform: translateX(25%);
+	}
+
+	50% {
+		transform: translateX(50%);
+
+	}
+
+	75% {
+		transform: translateX(75%);
+	}
+
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+.header-conten {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+h2 {
+	width: 880px;
+	height: 60px;
+	margin: auto;
+	align-self: center;
+	background-size: 100%;
+	font-size: 35px;
+	color: #4CDAFF;
+	background: url(../images/top_title.png) no-repeat center center;
+	line-height: 50px;
+	text-align: center;
+}
+
+/* 左边内容部分 */
+.conten-left {
+	display: flex;
+	flex-direction: column;
+	width: 35%;
+	min-width: 700px;
+	max-width: 100%;
+}
+
+.conten-left-top {
+	flex: 1;
+	background: rgba(15, 76, 128, 0.5);
+	margin-top: 20px;
+	margin-right: 10px;
+}
+
+#main-left-top {
+	margin-top: 10px;
+	width: 100%;
+	height: 100%;
+}
+
+.conten-left-botton {
+	flex: 1;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	background: rgba(15, 76, 128, 0.5);
+}
+
+#main-left-botton {
+	width: 100%;
+	height: 100%;
+}
+
+/* 中间内容部分 */
+.conten-center {
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+}
+
+.conten-center-top {
+	height: 60px;
+	width: 100%;
+	color: #20D2D3;
+	border: 1px solid #14649A;
+	margin-top: 20px;
+	overflow: hidden;
+	/* text-indent: -9999px; */
+}
+
+.conten-center-top p {
+	font-size: 25px;
+	color: yellow;
+	line-height: 10px;
+	text-align: center;
+	animation: move 4s linear infinite alternate;
+}
+
+#allmap {
+	flex: 1;
+	width: 100%;
+	margin: 0 auto;
+
+}
+
+/* 右边内容部分 */
+.conten-right {
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+}
+
+.conten-right-top {
+	flex: 1;
+	margin-top: 20px;
+	margin-left: 10px;
+	background: rgba(15, 76, 128, 0.5);
+}
+
+#main-right-top {
+	width: 100%;
+	height: 100%;
+	margin-top: 15px;
+}
+
+.conten-right-center {
+	flex: 1;
+	margin-left: 10px;
+	margin-top: 10px;
+	background: rgba(15, 76, 128, 0.5);
+}
+
+#main-right-mid {
+	width: 100%;
+	height: 100%;
+}
+
+.conten-right-botton {
+	flex: 1;
+	margin-left: 10px;
+	margin-top: 10px;
+	background: rgba(15, 76, 128, 0.5);
+}
+
+#main-right-botton {
+	width: 100%;
+	height: 100%;
+}
