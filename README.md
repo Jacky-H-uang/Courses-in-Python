@@ -30,6 +30,8 @@ The Course has been finished!!!
 ![avatar](Visualization_Courses/Images/display6.png)
 
 
+- NumericalAnalysis Courses added:
+    1. 高斯消元法 与 列主消元法。
 # Summary:
 After this term's two course have been finished I have learned more about Python and the Algorithm and a little web skills.
 I wish I could use what I have learned this term to make more thing in the futrue!
