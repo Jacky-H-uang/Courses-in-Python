@@ -1,8 +1,7 @@
 # Created By Jacky on 2021/4/7
 
-
 # 高斯消元法算法
-# Input : 系数矩阵 A 和 Y 矩阵
+# Input : 系数矩阵 A 和 b 矩阵
 # Output: 结果矩阵 x
 
 
@@ -30,7 +29,8 @@ def gauss(A,b):
         x[i] = (b[i] - sum) / A[i , i]
 
     print("消元后的矩阵 A : \n" , A)
-    print("消元后的矩阵 b : \n" , b)
+    print("\n消元后的矩阵 b : \n" , b)
+    print("\n解得 X ：")
     print(x)
 
     return x

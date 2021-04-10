@@ -1,8 +1,9 @@
 # Created By Jacky on 2021/4/7
 
 
-# ÁĞÖ÷ÔªÏûÈ¥·¨
-# Ã¿´Î¶¼°Ñ×î´óµÄÖ÷Ôª·ÅÔÚµÚÒ»ĞĞ
+# åˆ—ä¸»æ¶ˆå…ƒæ³•ç®—æ³• (æ¯ä¸€ä¸ªæŠŠæœ€å¤§çš„ä¸»å…ƒæ”¾åœ¨å‰é¢)
+# Input: ç³»æ•°çŸ©é˜µ A å’Œ b çŸ©é˜µ
+# Output: ç»“æœçŸ©é˜µ x
 
 
 
@@ -11,24 +12,43 @@ from NumericalAnalysis_Courses.Gaussian_Elimination import Gaussian_Function
 
 def Eliminate_Pivot(A,b):
     n = len(b)
-    aux = np.zeros((1,n))               # ¸¨ÖúÏòÁ¿
+    aux = np.zeros((1,n))               # è¾…åŠ©å‘é‡
+    x = np.zeros((n,1))
 
-    for i in range(1,n):
-        max = abs(A[i,i])
-        m = i                           # ¼ÇÂ¼×î´óµÄĞĞ
+    for i in range(n):
+        max = np.abs(A[i,i])
+        m = i                           # è®°å½•æœ€å¤§çš„è¡Œ
         for j in range(i+1,n):
             if max < np.abs(A[j , i]):
                 max = np.abs(A[j , i])
                 m = j
-        if(m != i):                     # Óöµ½²»µÈµÄÊ±ºò¼´Òª½»»»ĞĞµÄÊ±ºò
+        if(m != i):                     # é‡åˆ°ä¸ç­‰çš„æ—¶å€™å³è¦äº¤æ¢è¡Œçš„æ—¶å€™
             for k in range(i , n):
-                aux[k] = A[i , k]
+                aux[i,k] = A[i , k]
                 A[i , k] = A[m , k]
-                A[m , k] = aux[k]
-            temp = b[i]
-            b[i] = b[m]
-            b[m] = temp
+                A[m , k] = aux[i,k]
+            temp = b[i,0]
+            b[i,0] = b[m,0]
+            b[m,0] = temp
+        for k in range(i+1,n):
+            for j in range(i+1,n):
+                A[k,j] = A[k,j] + A[i,j] * (-A[k,i]/A[i,i])
+            b[k] = b[k] + b[i] * (-A[k,i] / A[i,i])
+            A[k,i] = 0
 
-def Gauss_Lie(A , b):
-    Eliminate_Pivot(A , b)                # ÏÈÅÅÁĞÖ÷Ôª
-    Gaussian_Function.gauss(A , b)        # È»ºóÔÙ¸ßË¹ÏûÔª
+    print("æ¶ˆå…ƒåçš„Aï¼š\n")
+    print(A)
+    print("æ¶ˆå…ƒåçš„bï¼š\n")
+    print(b)
+
+    x[n-1] = b[n-1] / A[n-1,n-1]
+    for i in range(n-1,-1,-1):
+        sum = 0
+        for j in range(i+1,n):
+            sum += A[i,j]*x[j]
+        x[i] = (b[i]-sum) / A[i,i]
+
+    print("è§£å¾— X : \n")
+    print(x)
+
+    return x
