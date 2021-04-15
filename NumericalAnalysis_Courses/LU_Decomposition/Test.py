@@ -22,3 +22,8 @@ if __name__ == '__main__':
     A2 = np.mat([[1,2,3],[2,5,2],[3,1,5]])
     b2 = np.mat([14,18,20]).T
     Test(A2,b2)
+
+    # Example3:
+    A3 = np.mat([[3,7],[6,1]])
+    b3 = np.mat([1,-11]).T
+    Test(A3,b3)

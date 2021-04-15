@@ -1,5 +1,9 @@
 # Created By Jacky on 2021/4/14
 
+# LU分解算法 (将系数矩阵A分解为上三角矩阵 L 和下三角矩阵 U 其中 A = LU)
+# Input: 系数矩阵 A 和 b 矩阵
+# Output: 结果矩阵 x
+
 
 import numpy as np
 
