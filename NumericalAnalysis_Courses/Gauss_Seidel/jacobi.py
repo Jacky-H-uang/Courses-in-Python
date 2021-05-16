@@ -6,6 +6,7 @@ def jacobi_iteration(A,b,k,error):
     n = len(A)
     Aux = A
     x = np.zeros(n)
+    cnt = 0
     for time in range(k):               # 迭代 k 次
         # 保存单次迭代后的值
         x_single = np.zeros(n)
@@ -15,8 +16,9 @@ def jacobi_iteration(A,b,k,error):
                 if i == j:  continue
                 cur += (-Aux[i,j]) * x[j]
             x_single[i] = (cur + b[i,0]) / Aux[i,i]
-        print("迭代第 " + str(time+1) + " 次得到 x: ")
-        print(x_single)
+        # print("迭代第 " + str(time+1) + " 次得到 x: ")
+        cnt += 1
+        # print(x_single)
 
         error_x = 0.0           # 保存迭代的最大的误差
         for p in range(n):
@@ -25,9 +27,9 @@ def jacobi_iteration(A,b,k,error):
         if error_x < error:
             break
 
-    print("\n最终收敛的结果 : ")
-    print(x)
-
+    # print("\n最终收敛的结果 : ")
+    # print(x)
+    return cnt , x
 
 if __name__ == '__main__':
     A = np.mat([[10,-1,2,0],[-1,11,-1,3],[2,-1,10,-1],[0,3,-1,8]])

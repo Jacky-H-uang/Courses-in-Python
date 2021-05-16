@@ -12,26 +12,27 @@ def compareThree(A,b,k,w,error):
     print("======================\n")
 
     print("一 : Jacobi Method")
-    jacobi_iteration(A,b,100,error=0.00001)
+    c1 , xc = jacobi_iteration(A,b,k,error)
+    print("迭代次数 : ",c1)
+    print("最终收敛 : " , xc)
 
     print("\n二 : Gauss Seidel")
-    gauss_seidel(A,b,100,error=0.00001)
+    c2 , xc = gauss_seidel(A,b,k,error)
+    print("迭代次数 : ",c2)
+    print("最终收敛 : " , xc)
 
     print("\n三 : SOR ")
-    sor_function(A,b,1.25,100,error=0.00001)
-
+    c3 , xc = sor_function(A,b,w,k,error)
+    print("迭代次数 : ",c3)
+    print("最终收敛 : " , xc)
 
 
 if __name__ == '__main__':
     k = 100                 # 迭代 100 次
-    w = 1.25                # 松弛参数 1.25
-    error = 0.00001         # 误差 0.00001
+    w = 1.1                 # 松弛参数 1.1
+    error = 0.000001        # 误差 0.000001
 
-    A1 = np.mat([[-4,1,1,1],[1,-4,1,1],[1,1,-4,1],[1,1,1,-4]])
-    b1 = np.mat([1,1,1,1]).T
+    A = np.mat([[3,-1,0,0,0,0.5],[-1,3,-1,0,0.5,0],[0,-1,3,-1,0,0],[0,0,-1,3,-1,0],[0,0.5,0,-1,3,-1],[0.5,0,0,0,-1,3]])
+    b = np.mat([2.5,1.5,1,1,1.5,2.5]).T
 
-    #compareThree(A1,b1,k,w,error)
-
-    A2 = np.mat([[4,3,0],[3,4,-1],[0,-1,4]])
-    b2 = np.mat([24,30,-24]).T
-    compareThree(A2,b2,k,w,error = 0.0000001)
+    compareThree(A,b,k,w,error)
