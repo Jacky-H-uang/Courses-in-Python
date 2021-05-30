@@ -9,10 +9,10 @@ Tips : all the tests i will push after the tests have been finished , it is prev
 The Course has been finished!!!
 
 ### Display:
-- The Algorithm Course are divied in some tags.
+一： The Algorithm Course are divied in some tags.
 
 
-- The Visualization Course includes three tests and a last is the final test:
+二： The Visualization Course includes three tests and a last is the final test:
 
 1. Test1 is some numpy using methods.
 2. Test2 includes some tasks and following images are the display:
@@ -30,8 +30,19 @@ The Course has been finished!!!
 ![avatar](Visualization_Courses/Images/display6.png)
 
 
-- NumericalAnalysis Courses added:
-    1. 高斯消元法 与 列主消元法。
+三： NumericalAnalysis Courses:
+
+    -  高斯消元法 与 列主消元法。
+    -  LU 分解
+    -  Gauss-Seidel 迭代 与 SOR
+    -  拉格朗日插值
+    -  不动点迭代
+
+四：DIP_Courses(DigitalImageProcessing)
+
+
+    -  Gray Tranformation 
+
 # Summary:
 After this term's two course have been finished I have learned more about Python and the Algorithm and a little web skills.
 I wish I could use what I have learned this term to make more thing in the futrue!
