@@ -18,9 +18,9 @@ def sor_function(A,b,w,k ,error = 0.000001):
                 if i == j:  continue
                 cur += (-Aux[i,j]) * x[j]
             x[i] = x_before[i] * (1-w)  + w * (cur + b[i,0]) / Aux[i,i]     # 松弛参数 w
-        # print("迭代第 " + str(time+1) + " 次得到 x: ")
+        print("迭代第 " + str(time+1) + " 次得到 x: ")
         cnt += 1
-        # print(x)
+        print(x)
 
         # 判断误差 小于error的时候为收敛
         error_x = 0
@@ -28,8 +28,8 @@ def sor_function(A,b,w,k ,error = 0.000001):
             error_x = max(abs(compare_x[p] - x[p]),error_x)
         if error_x < error:
             break
-    # print("\n最终收敛的结果 : ")
-    # print(x)
+    print("\n最终收敛的结果 : ")
+    print(x)
 
     return cnt , x
 

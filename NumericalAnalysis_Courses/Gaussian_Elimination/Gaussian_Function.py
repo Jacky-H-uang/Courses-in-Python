@@ -28,9 +28,9 @@ def gauss(A,b):
             sum = sum + A[i , j] * x[j]
         x[i] = (b[i] - sum) / A[i , i]
 
-    print("消元后的矩阵 A : \n" , A)
-    print("\n消元后的矩阵 b : \n" , b)
-    print("\n解得 X ：")
-    print(x)
+    #print("消元后的矩阵 A : \n" , A)
+    #print("\n消元后的矩阵 b : \n" , b)
+    #print("\n解得 X ：")
+    #print(x)
 
     return x
